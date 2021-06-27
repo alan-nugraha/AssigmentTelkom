@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {Color} from '../../styles/Color';
+import {goToAddAddressPage} from '../../utils/Locations';
 
 import styles from './styles';
 
@@ -25,26 +27,28 @@ function Home(props) {
         <View style={styles.bottomMenu}>
           <TouchableOpacity
             style={styles.containerServiceBottom}
-            onPress={() => props.navigation.navigate('Maps')}>
-            <View style={{...styles.containerIcon, backgroundColor: '#01ad12'}}>
+            onPress={() => goToAddAddressPage(props.navigation)}>
+            <View
+              style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
               <Icon name="motorbike" size={30} color={'white'} />
             </View>
             <Text style={styles.titleMenuService}>GoRide</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.containerServiceBottom}>
-            <View style={{...styles.containerIcon, backgroundColor: '#01ad12'}}>
+            <View
+              style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
               <Icon name="car" size={30} color={'white'} />
             </View>
             <Text style={styles.titleMenuService}>GoCar</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.containerServiceBottom}>
-            <View style={{...styles.containerIcon, backgroundColor: '#e52a39'}}>
+            <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
               <Icon name="food" size={30} color={'white'} />
             </View>
             <Text style={styles.titleMenuService}>GoFood</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.containerServiceBottom}>
-            <View style={{...styles.containerIcon, backgroundColor: '#e52a39'}}>
+            <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
               <Icon name="cart-outline" size={30} color={'white'} />
             </View>
             <Text style={styles.titleMenuService}>GoMart</Text>

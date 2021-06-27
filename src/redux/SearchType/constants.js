@@ -1,0 +1,2 @@
+export const SET_SEARCH_TYPE = 'SET_SEARCH_TYPE';
+export const SET_MODAL_VISIBLE = 'SET_MODAL_VISIBLE';

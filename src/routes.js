@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Home, Maps} from './Screens/';
+import {Home, Maps, Success} from './Screens/';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +15,11 @@ const Routes = () => {
       <Stack.Screen
         name="Maps"
         component={Maps}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Success"
+        component={Success}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
