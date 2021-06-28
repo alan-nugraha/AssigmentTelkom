@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Color} from '../../styles/Color';
 import {goToAddAddressPage} from '../../utils/Locations';
-import {Banner} from '../../uikit';
-
+import {Banner, Button} from '../../uikit';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
+import Flex from '../../styles/Flex';
 
 function Home(props) {
   return (
@@ -17,47 +17,76 @@ function Home(props) {
             <Text style={styles.infoHistory}>Klik & cek riwayat</Text>
           </TouchableOpacity>
           <View style={styles.rightMenuContainer}>
-            <Text style={styles.textChooseService}>Bayar</Text>
-            <Text style={styles.textChooseService}>Top up</Text>
-            <Text style={styles.textChooseService}>Eksplor</Text>
+            <Button
+              label="Bayar"
+              iconName="contactless-payment"
+              type="menu"
+              size={25}
+              colorText={Color.WHITE}
+            />
+            <Button
+              label="Top up"
+              iconName="format-vertical-align-top"
+              type="menu"
+              size={25}
+              colorText={Color.WHITE}
+            />
+            <Button
+              label="Eksplor"
+              iconName="format-align-left"
+              type="menu"
+              size={25}
+              colorText={Color.WHITE}
+            />
           </View>
         </View>
         <ScrollView
           style={styles.containerContent}
           showsVerticalScrollIndicator={false}>
+          <View style={[Flex.rowCenterBetween, styles.containerHistory]}>
+            <Text style={styles.textHistory}>Riwayat Pesanan</Text>
+            <View style={{backgroundColor: Color.PRIMARY, borderRadius: 100}}>
+              <Icon name="arrow-right" size={25} color={Color.WHITE} />
+            </View>
+          </View>
           <Text style={styles.titleContent}>Konten buat Kamu</Text>
           <Banner />
         </ScrollView>
       </View>
       <View style={styles.bottomMenu}>
-        <TouchableOpacity
-          style={styles.containerServiceBottom}
-          onPress={() => goToAddAddressPage(props.navigation)}>
-          <View
-            style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
-            <Icon name="motorbike" size={30} color={'white'} />
-          </View>
-          <Text style={styles.titleMenuService}>GoRide</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.containerServiceBottom}>
-          <View
-            style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
-            <Icon name="car" size={30} color={'white'} />
-          </View>
-          <Text style={styles.titleMenuService}>GoCar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.containerServiceBottom}>
-          <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
-            <Icon name="food" size={30} color={'white'} />
-          </View>
-          <Text style={styles.titleMenuService}>GoFood</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.containerServiceBottom}>
-          <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
-            <Icon name="cart-outline" size={30} color={'white'} />
-          </View>
-          <Text style={styles.titleMenuService}>GoMart</Text>
-        </TouchableOpacity>
+        <Button
+          label="GoRide"
+          iconName="motorbike"
+          color={Color.PRIMARY}
+          type="menu"
+          size={30}
+          colorText={Color.GREY2}
+          onPress={() => goToAddAddressPage(props.navigation)}
+        />
+        <Button
+          label="GoCar"
+          iconName="car"
+          color={Color.PRIMARY}
+          type="menu"
+          size={30}
+          colorText={Color.GREY2}
+        />
+        <Button
+          label="GoFood"
+          iconName="food"
+          color={Color.RED}
+          type="menu"
+          size={30}
+          colorText={Color.GREY2}
+        />
+        <Button
+          label="GoMart"
+          iconName="cart-outline"
+          color={Color.RED}
+          type="menu"
+          size={30}
+          colorText={Color.GREY2}
+        />
       </View>
     </View>
   );

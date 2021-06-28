@@ -68,15 +68,24 @@ export default StyleSheet.create({
   containerServiceBottom: {
     alignItems: 'center',
   },
-  containerIcon: {
-    height: 40,
-    width: 40,
-    borderRadius: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 5,
-  },
   titleMenuService: {
     color: '#848484',
+  },
+  containerHistory: {
+    padding: '5%',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+    elevation: 2,
+    marginBottom: 20,
+  },
+  textHistory: {
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });
