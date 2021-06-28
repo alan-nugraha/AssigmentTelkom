@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
+import {ScrollView, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useDispatch, useSelector} from 'react-redux';
 import {View, Text, Button} from '..';
@@ -74,8 +74,13 @@ const ChooseDriver = ({onOrder}) => {
         </ScrollView>
       </View>
       <View padding={20} style={styles.btnConfirmation}>
-        <Text>Link aja</Text>
-        <Text>button biru</Text>
+        <View style={[Flex.rowCenter, styles.containerPayment]}>
+          <Image
+            style={styles.image}
+            source={require('../../assets/icons-LinkAja.png')}
+          />
+          <Text style={styles.textPayment}>LinkAja</Text>
+        </View>
         <Button
           onPress={() => {
             dispatch(setMapType('send-active'));
@@ -118,5 +123,16 @@ const styles = StyleSheet.create({
     backgroundColor: Color.WHITE,
     elevation: 10,
     marginTop: -4,
+  },
+  image: {
+    height: 30,
+    width: 30,
+  },
+  containerPayment: {
+    marginBottom: 20,
+  },
+  textPayment: {
+    marginLeft: 10,
+    fontWeight: 'bold',
   },
 });
