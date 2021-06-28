@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Color} from '../../styles/Color';
 import {goToAddAddressPage} from '../../utils/Locations';
+import {Banner} from '../../uikit';
 
 import styles from './styles';
 
@@ -21,39 +22,42 @@ function Home(props) {
             <Text style={styles.textChooseService}>Eksplor</Text>
           </View>
         </View>
-        <View style={styles.containerContent}>
+        <ScrollView
+          style={styles.containerContent}
+          showsVerticalScrollIndicator={false}>
           <Text style={styles.titleContent}>Konten buat Kamu</Text>
-        </View>
-        <View style={styles.bottomMenu}>
-          <TouchableOpacity
-            style={styles.containerServiceBottom}
-            onPress={() => goToAddAddressPage(props.navigation)}>
-            <View
-              style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
-              <Icon name="motorbike" size={30} color={'white'} />
-            </View>
-            <Text style={styles.titleMenuService}>GoRide</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.containerServiceBottom}>
-            <View
-              style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
-              <Icon name="car" size={30} color={'white'} />
-            </View>
-            <Text style={styles.titleMenuService}>GoCar</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.containerServiceBottom}>
-            <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
-              <Icon name="food" size={30} color={'white'} />
-            </View>
-            <Text style={styles.titleMenuService}>GoFood</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.containerServiceBottom}>
-            <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
-              <Icon name="cart-outline" size={30} color={'white'} />
-            </View>
-            <Text style={styles.titleMenuService}>GoMart</Text>
-          </TouchableOpacity>
-        </View>
+          <Banner />
+        </ScrollView>
+      </View>
+      <View style={styles.bottomMenu}>
+        <TouchableOpacity
+          style={styles.containerServiceBottom}
+          onPress={() => goToAddAddressPage(props.navigation)}>
+          <View
+            style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
+            <Icon name="motorbike" size={30} color={'white'} />
+          </View>
+          <Text style={styles.titleMenuService}>GoRide</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.containerServiceBottom}>
+          <View
+            style={{...styles.containerIcon, backgroundColor: Color.PRIMARY}}>
+            <Icon name="car" size={30} color={'white'} />
+          </View>
+          <Text style={styles.titleMenuService}>GoCar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.containerServiceBottom}>
+          <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
+            <Icon name="food" size={30} color={'white'} />
+          </View>
+          <Text style={styles.titleMenuService}>GoFood</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.containerServiceBottom}>
+          <View style={{...styles.containerIcon, backgroundColor: Color.RED}}>
+            <Icon name="cart-outline" size={30} color={'white'} />
+          </View>
+          <Text style={styles.titleMenuService}>GoMart</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
