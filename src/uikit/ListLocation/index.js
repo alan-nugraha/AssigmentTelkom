@@ -10,7 +10,7 @@ const ListLocation = ({onItemSelect}) => {
   const renderEmpty = () => {
     return (
       <View style={[Flex.rowCenter, styles.container]}>
-        <Image style={styles.image} source={require('../../assets/logo.png')} />
+        <Image style={styles.image} source={require('../../assets/logo.jpg')} />
         <View marginLeft={16} style={styles.rightContainer}>
           <Text size={16} fontWeight="bold">
             Betul, pesan Gojek aja
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 64,
-    width: 60,
+    width: 64,
   },
   rightContainer: {
     flex: 1,
