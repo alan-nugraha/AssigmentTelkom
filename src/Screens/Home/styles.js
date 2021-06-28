@@ -59,6 +59,11 @@ export default StyleSheet.create({
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
     elevation: 7,
+    position: 'absolute',
+    bottom: 0,
+    width: '90%',
+    alignSelf: 'center',
+    marginBottom: 20,
   },
   containerServiceBottom: {
     alignItems: 'center',
