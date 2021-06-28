@@ -66,7 +66,6 @@ function MapsScreen(props) {
   }, []);
 
   const onRegionChangeComplete = async val => {
-    console.log('akwoekaowe')
     if (mapType === 'vice-versa') {
       const convertLatLng = await Axios.get(
         `https://maps.googleapis.com/maps/api/geocode/json?latlng=${val?.latitude},${val?.longitude}&key=${Config.GMAP_API_KEY}`,
@@ -132,7 +131,7 @@ function MapsScreen(props) {
             <MapViewDirections
               origin={mapList[0]}
               destination={mapList[1]}
-              apikey={'AIzaSyDnNvDFPC-zgjggGXYNoQR3yyZ-92UZ4LM'} // insert your API Key here
+              apikey={'AIzaSyDnNvDFPC-zgjggGXYNoQR3yyZ-92UZ4LM'}
               strokeWidth={2}
               strokeColor={Color.PRIMARY}
             />
@@ -181,16 +180,18 @@ function MapsScreen(props) {
           }}
         />
       ) : mapType === 'send-active' ? (
-        <View>
+        <View style={styles.containerBtn}>
           <Button label="Perjalanan Selesai" />
         </View>
       ) : selectedDestination || selectedPickup || mapType === 'vice-versa' ? (
         <ConfirmationBottomSheet mapRef={mapRef} />
       ) : (
-        <Button
-          label="show modal search map"
-          onPress={() => dispatch(setModalVisible(true))}
-        />
+        <View style={styles.containerBtn}>
+          <Button
+            label="show modal search map"
+            onPress={() => dispatch(setModalVisible(true))}
+          />
+        </View>
       )}
       <ModalSearchMap
         visible={modalVisible}

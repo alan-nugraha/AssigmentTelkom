@@ -34,4 +34,7 @@ export default StyleSheet.create({
     height: 48,
     width: 48,
   },
+  containerBtn: {
+    padding: '5%',
+  },
 });
