@@ -3,7 +3,7 @@ import {StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
-import {Button, InputNotes, Text, View} from '..';
+import {Button, Text, View} from '..';
 import {LOCATION} from '../../constants';
 import {setMapType, setRegion, setSearchInput} from '../../redux/Map/actions';
 import {setModalVisible, setSearchType} from '../../redux/SearchType/actions';
@@ -109,9 +109,6 @@ const ConfirmationBottomSheet = ({mapRef}) => {
                 : selectedDestination?.secondary_text}
             </Text>
           </View>
-        </View>
-        <View marginBottom={16}>
-          <InputNotes />
         </View>
         <Button
           onPress={() => {
