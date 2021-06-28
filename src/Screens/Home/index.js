@@ -44,8 +44,12 @@ function Home(props) {
           style={styles.containerContent}
           showsVerticalScrollIndicator={false}>
           <View style={[Flex.rowCenterBetween, styles.containerHistory]}>
-            <Text style={styles.textHistory}>Riwayat Pesanan</Text>
-            <View style={{backgroundColor: Color.PRIMARY, borderRadius: 100}}>
+            <View style={[Flex.rowCenterBetween]}>
+              <Icon name="history" size={25} />
+              <Text style={styles.textHistory}>Riwayat Pesanan</Text>
+            </View>
+            <View
+              style={{backgroundColor: Color.SECOUND_GREEN, borderRadius: 100}}>
               <Icon name="arrow-right" size={25} color={Color.WHITE} />
             </View>
           </View>

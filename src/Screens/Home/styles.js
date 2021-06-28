@@ -87,5 +87,6 @@ export default StyleSheet.create({
   textHistory: {
     fontSize: 14,
     fontWeight: 'bold',
+    marginLeft: 5,
   },
 });
