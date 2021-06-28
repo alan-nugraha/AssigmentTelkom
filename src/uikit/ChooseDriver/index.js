@@ -94,7 +94,6 @@ const ChooseDriver = ({onOrder}) => {
             onOrder && onOrder();
           }}
           label="Order GoRide"
-          total="Rp18.000"
         />
       </View>
     </View>
