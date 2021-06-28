@@ -5,7 +5,7 @@ import {Text, View} from '..';
 import {Color} from '../../styles/Color';
 import Flex from '../../styles/Flex';
 
-const Button = ({type, iconName, label, onPress}) => {
+const Button = ({type, iconName, label, onPress, color, size, colorText}) => {
   if (type === 'icon') {
     return (
       <TouchableOpacity
@@ -25,6 +25,26 @@ const Button = ({type, iconName, label, onPress}) => {
         onPress={() => onPress && onPress()}
         style={styles.ghostContainer}>
         <Text size={12} color={Color.PRIMARY} fontWeight="bold">
+          {label}
+        </Text>
+      </TouchableOpacity>
+    );
+  }
+
+  if (type === 'menu') {
+    return (
+      <TouchableOpacity
+        style={Flex.alignCenter}
+        onPress={() => onPress && onPress()}>
+        <View
+          height={40}
+          width={40}
+          borderRadius={100}
+          color={color}
+          style={styles.menuContainer}>
+          <Icon name={iconName} size={size} color={Color.WHITE} />
+        </View>
+        <Text size={13} color={colorText}>
           {label}
         </Text>
       </TouchableOpacity>
@@ -65,5 +85,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 20,
+  },
+  menuContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 5,
   },
 });
