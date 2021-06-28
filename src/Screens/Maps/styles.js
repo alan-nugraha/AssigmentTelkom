@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {Color} from '../../styles/Color';
 
 export default StyleSheet.create({
   map: {
@@ -35,6 +36,16 @@ export default StyleSheet.create({
     width: 48,
   },
   containerBtn: {
+    backgroundColor: Color.WHITE,
+    padding: '5%',
+  },
+  driverContainer: {
+    height: 150,
+    backgroundColor: Color.WHITE,
+    borderTopRightRadius: 32,
+    borderTopLeftRadius: 32,
+  },
+  InfoDriver: {
     padding: '5%',
   },
 });

@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {StatusBar, View} from 'react-native';
+import {StatusBar, View, ScrollView, Image} from 'react-native';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -24,6 +24,7 @@ import {requestLocPermission} from '../../utils/Permissions';
 import Axios from 'axios';
 import styles from './styles';
 import Config from 'react-native-config';
+import Flex from '../../styles/Flex';
 
 function MapsScreen(props) {
   const {navigation} = props;
@@ -180,8 +181,27 @@ function MapsScreen(props) {
           }}
         />
       ) : mapType === 'send-active' ? (
-        <View style={styles.containerBtn}>
-          <Button label="Perjalanan Selesai" />
+        <View>
+          <View paddingTop={20} style={styles.driverContainer}>
+            <ScrollView>
+              <View style={[Flex.rowCenterBetween, styles.InfoDriver]}>
+                <View>
+                  <Text size={20} fontWeight="bold">
+                    R60508HP
+                  </Text>
+                </View>
+                <View>
+                  <Image
+                    source={require('../../assets/profile.jpeg')}
+                    style={{height: 70, width: 70, borderRadius: 100}}
+                  />
+                </View>
+              </View>
+            </ScrollView>
+          </View>
+          <View style={styles.containerBtn}>
+            <Button label="Perjalanan Selesai" />
+          </View>
         </View>
       ) : selectedDestination || selectedPickup || mapType === 'vice-versa' ? (
         <ConfirmationBottomSheet mapRef={mapRef} />
