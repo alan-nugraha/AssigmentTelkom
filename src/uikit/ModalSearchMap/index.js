@@ -105,7 +105,7 @@ const ModalSearchMap = ({visible, onClose, onSelectMap, mapRef}) => {
               onPress={handleViaMap}
               type="icon"
               iconName="map"
-              label="Select via map"
+              label="Pilih lewat peta"
             />
           </View>
         </View>

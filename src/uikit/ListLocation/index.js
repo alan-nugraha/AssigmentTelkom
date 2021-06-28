@@ -13,13 +13,11 @@ const ListLocation = ({onItemSelect}) => {
         <Image style={styles.image} source={require('../../assets/logo.png')} />
         <View marginLeft={16} style={styles.rightContainer}>
           <Text size={16} fontWeight="bold">
-            That's right, order Gojek now
+            Betul, pesan Gojek aja
           </Text>
           <View marginBottom={4} />
           <View>
-            <Text>
-              Less stress on road, more joy on the ride. Aaaah asdks asdla
-            </Text>
+            <Text>Bisa fokus nikmatin pemandangan sampe tujuan~</Text>
           </View>
         </View>
       </View>

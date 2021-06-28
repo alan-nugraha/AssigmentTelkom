@@ -79,7 +79,7 @@ const SearchInput = ({}) => {
             )
           }
           onFocus={() => handleFocusInput('pickup')}
-          placeholder="Your current location"
+          placeholder="Lokasi kamu sekarang"
           style={styles.input}
           value={searchInput?.pickup}
         />
@@ -95,7 +95,7 @@ const SearchInput = ({}) => {
             )
           }
           onFocus={() => handleFocusInput('destination')}
-          placeholder="Search for a destination"
+          placeholder="Cari lokasi tujuan"
           style={styles.input}
           value={searchInput?.destination}
         />

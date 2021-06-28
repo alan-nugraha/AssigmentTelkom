@@ -1,6 +1,6 @@
 export const Color = {
   PRIMARY: '#01ad12',
-
+  SECOUND_GREEN: '#097a0e',
   BLUE_LIGHT: '#00B1DC',
   BLUE_DARK: '#0081a0',
   GREEN: '#E3FFE8',

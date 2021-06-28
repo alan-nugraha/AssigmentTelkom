@@ -12,17 +12,17 @@ const Banner = () => {
     },
     {
       id: 1,
-      image: require('../../assets/banner.jpg'),
-      title: 'Kecipratan promonya, banyak hematnya',
+      image: require('../../assets/banner2.jpg'),
+      title: 'Wajib teliti sebelum membeli',
       content:
-        'Nikmati diskon gede-gedean di Tokopedia spesial buat pengguna setia Gojek. Klik buat dapetin promonya sekarang!',
+        'Pernah tergiur sama akun game & streaming online yang dijual dengan harga murah? Klik di sini!',
     },
     {
       id: 2,
-      image: require('../../assets/banner.jpg'),
-      title: 'Kecipratan promonya, banyak hematnya',
+      image: require('../../assets/banner3.jpg'),
+      title: 'Ambil vouchermu sekarang!',
       content:
-        'Nikmati diskon gede-gedean di Tokopedia spesial buat pengguna setia Gojek. Klik buat dapetin promonya sekarang!',
+        'Nikmati diskon untuk dianter GoRide/Gocar. Klik buat dapetin promonya dan mulai perjalanan aman kamu sekarang!',
     },
   ];
 
@@ -71,9 +71,9 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     marginBottom: 5,
-    fontSize: 16,
+    fontSize: 15,
   },
   content: {
-    fontSize: 14,
+    fontSize: 13,
   },
 });
