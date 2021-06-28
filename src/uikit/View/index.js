@@ -17,6 +17,9 @@ const getStyleView = (
   paddingY,
   paddingX,
   color,
+  height,
+  width,
+  borderRadius,
 ) => {
   let style = {};
   if (color) {
@@ -153,6 +156,34 @@ const getStyleView = (
       },
     };
   }
+
+  if (height) {
+    style = {
+      ...style,
+      ...{
+        height,
+      },
+    };
+  }
+
+  if (width) {
+    style = {
+      ...style,
+      ...{
+        width,
+      },
+    };
+  }
+
+  if (borderRadius) {
+    style = {
+      ...style,
+      ...{
+        borderRadius,
+      },
+    };
+  }
+
   return style;
 };
 
@@ -176,6 +207,9 @@ function View({
   color,
   testID,
   onLayout,
+  height,
+  width,
+  borderRadius,
 }) {
   const styleView = getStyleView(
     margin,
@@ -193,6 +227,9 @@ function View({
     paddingY,
     paddingX,
     color,
+    height,
+    width,
+    borderRadius,
   );
 
   return (
