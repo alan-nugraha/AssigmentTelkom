@@ -1,12 +1,12 @@
 import {CommonActions} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {Button} from '../../uikit';
 import Flex from '../../styles/Flex';
-import {Color} from '../../styles/Color';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Rating, AirbnbRating} from 'react-native-ratings';
+import {Rating} from 'react-native-ratings';
+import styles from './styles';
 
 const Success = ({navigation}) => {
   const dispatch = useDispatch();
@@ -17,9 +17,7 @@ const Success = ({navigation}) => {
           <View style={styles.containerIcon}>
             <Icon name="motorbike" size={30} color={'white'} />
           </View>
-          <Text style={{marginLeft: 10, fontSize: 16, fontWeight: 'bold'}}>
-            Terima Kasih!
-          </Text>
+          <Text style={styles.textThanks}>Terima Kasih!</Text>
         </View>
         <View style={styles.infoPayment}>
           <Text style={styles.textPayment}>Dibayar pakai LinkAja</Text>
@@ -55,50 +53,3 @@ const Success = ({navigation}) => {
 };
 
 export default Success;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Color.WHITE,
-  },
-  containerIcon: {
-    height: 50,
-    width: 50,
-    borderRadius: 80,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 5,
-    backgroundColor: Color.ORANGE2,
-  },
-  image: {
-    height: 40,
-    width: 40,
-  },
-  mainContainer: {
-    padding: '5%',
-  },
-  infoPayment: {
-    borderWidth: 1,
-    borderColor: Color.GREY,
-    padding: '5%',
-    backgroundColor: Color.WHITE3,
-    marginTop: 20,
-  },
-  textPayment: {
-    color: Color.GREY2,
-    marginBottom: 15,
-  },
-  infoPrice: {
-    marginLeft: 10,
-    fontWeight: 'bold',
-    fontSize: 20,
-  },
-  textQuestion: {
-    fontWeight: 'bold',
-    fontSize: 20,
-    margin: 20,
-  },
-  containerBtn: {
-    marginTop: 30,
-  },
-});
