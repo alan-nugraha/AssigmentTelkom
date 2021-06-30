@@ -19,9 +19,9 @@
 3. Type `npm install` or `yarn install`
 4. Type `yarn android` or `ENVFILE=.env.prod npx react-native run-android`
 
-<!-- ## Download the APK -->
+## Download the APK
 
-<!-- You can Download the APK [`here`](https://drive.google.com/file/d/12Q7g3kjdIrX5cW8yS_9XkLUCt2mpxAQY/view?usp=sharing) -->
+You can Download the APK [`here`](https://drive.google.com/file/d/1o8jMUMU6MvtfFVlRqu5nnIi3K7uTx9G0/view?usp=sharing)
 
 ## Screenshot from the App
 
