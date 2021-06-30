@@ -73,14 +73,9 @@ export default StyleSheet.create({
   },
   containerHistory: {
     padding: '5%',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.18,
-    shadowRadius: 1.0,
-    elevation: 1,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#848484',
     marginBottom: 20,
   },
   textHistory: {
